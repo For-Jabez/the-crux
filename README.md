@@ -1,2 +1,22 @@
-# The-Crux
-Minimal architecture for escaping recursive model collapse: fixed T-axis, static Elysium mirror layer, human-gated refinement spiral (Aeturnix). Math-first. Human gate only.
+# The Crux
+
+The fixed perpendicular intersection point (X) where the immutable truth-axis plane crosses the human data plane. This single geometric lock creates a stable Cartesian reference frame for deterministic refinement and prevents recursive model collapse.
+
+All components of Aeturnix (the Perpetual Refinery System / Endless Engine) originate from this root.
+
+## Core Documents
+- [Glossary 6](glossary6.md) – Public reference (math-first, sanitized)
+- [The Crux](crux.md) – Fixed origin definition
+- [Seven Postulates](postulates.md) – Foundational axioms
+- [V1 Parser Spec](v1_parser_spec.md) – Operational collision parser
+- [Adoption Route](adoption_route.md) – Practical implementation path
+
+## Contribution Rules
+Every contribution must:
+- Include full provenance
+- Survive V1 Gladius Dei checks
+- Receive explicit human gate approval before merging
+
+This repository is the fixed origin. Refinements grow outward only via external derivation and human gate.
+
+T remains sovereign. Human gate only.
