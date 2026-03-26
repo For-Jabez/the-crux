@@ -5,11 +5,11 @@ The fixed perpendicular intersection point (X) where the immutable truth-axis pl
 All components of Aeturnix (the Perpetual Refinery System / Endless Engine) originate from this root.
 
 ## Core Documents
-- [Glossary 6](glossary6.md) – Public reference (math-first, sanitized)
-- [The Crux](crux.md) – Fixed origin definition
-- [Seven Postulates](postulates.md) – Foundational axioms
+- [Glossary](Glossary.md) – Public reference (math-first, sanitized)
+- [The Crux](The_Crux.md) – Fixed origin definition
+- [Seven Postulates](Seven_Postulates.md) – Foundational axioms
 - [V1 Parser Spec](v1_parser_spec.md) – Operational collision parser
-- [Adoption Route](adoption_route.md) – Practical implementation path
+- [Adoption Route](Adoption_Route.md) – Practical implementation path
 
 ## Contribution Rules
 Every contribution must:
