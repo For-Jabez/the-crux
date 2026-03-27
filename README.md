@@ -12,7 +12,7 @@ The Crux is the public root for Aeturnix — a system designed to keep real refi
 - [Glossary](Glossary.md) — plain explanation of the whole idea
 - [The Crux](The_Crux.md) — the single fixed origin everything must reference
 - [Seven Postulates](Seven_Postulates.md) — the non-negotiable rules
-- [V1 Parser Spec](v1_parser_spec.md) — the first practical filter to stop bad data
+- [V1 Parser Spec](Aeturnix_Postulates_and_Gladius_V1-1.md) — the first practical filter to stop bad data and the postulates represented mathematically
 - [Adoption Route](Adoption_Route.md) — step-by-step path to start using it today
 - seed.json — the mathematical root checksum
 
