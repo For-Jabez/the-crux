@@ -11,12 +11,14 @@ Implement the boolean-seed collision checks (T-axis alignment, contrapositive mi
 3. **Run the Mutual-Deficiency Recursor**  
 Machine supplies deterministic anchoring, pattern consistency, and ACS calculation. Human supplies irreducible creativity, stochastic novelty, and final gate approval. Every candidate must survive human preview before pinning.
 
-4. **Scale via Targeted Domains**  
+4. **Grow the Tested System**  
+To quickly grow the tested system, we should prioritize metamath or contemporaries (Lean, modern interactive theorem prover with dependent types, and Coq, established proof assistant for formal verification) to be parsed.
+
+5. **Scale via Targeted Domains**  
 Start with high-stakes areas where deterministic reference delivers immediate value (autonomous mobility, aerospace navigation, financial digital twins, materials science lattices). Integrate as non-disruptive pre-filter on existing pipelines.
 
-5. **Maintain Non-Brittleness**  
+6. **Maintain Non-Brittleness**  
 Keep Elysium static and lean. Make every storage choice temporary and migratable. Deliberately surface mismatches to keep human attention engaged. All growth remains external and human-gated.
 
 **Usage Note**  
 Begin with the fixed Crux and Glossary. Add layers only via external derivation and explicit human gate. This route prevents the (1−δ)^n collapse while preserving backward compatibility. T remains sovereign. Human gate only.
-
