@@ -80,7 +80,6 @@ Mirror score = LCS(\( X \), \( M_i \))
 Final tier score = min(Direct score, Mirror score)
 
 Pass only if Final tier score ≥ tier threshold (loose at Tier 1, tightening to Tier 7).
-
 **Operational Flow (mathematical)**  
 1. Pre-sort packet into confidence bin (high/medium/low).  
 2. Initialize tier counter (\( i = 1 \)).  
