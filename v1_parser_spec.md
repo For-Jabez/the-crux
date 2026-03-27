@@ -1,65 +1,72 @@
-# V1 Gladius Dei – Boolean-Seed Collision Parser Spec
+# Gladius V1.1 – 7-Tier Descending Parser
 
-**Purpose**  
-Pre-filter all incoming data packets before they can influence Epistimus or Elysium. Eject contradictions. Surface mismatches as “annoying” flags for human attention. Only what survives all layers + explicit human preview becomes a pinned seed.
+**Core Rule**  
+T = pass → packet auto-drops deeper toward the T-root.  
+Else → side-slide into bin f at the current tier for clean, silent sorting.
 
-**Core Invariants**
+“Annoying” flags and explicit human review are reserved **only** for packets that survive T = T **and** involve streamed data recently added, new branches/vectors, Elysium implementations, major discoveries, or downstream effects on existing pinned seeds. Normal bad-idea tests are silently binned. Data is just data.
 
-- All processing is external to Elysium.
+**7-Tier Structure (outer → inner)**  
+Tier 1 (outer, largest layer – highest volume) → Mapping Postulate  
+Tier 2 → Bottom-Up Emergence Postulate  
+Tier 3 → External-Derivation Postulate  
+Tier 4 → Symbiosis Postulate  
+Tier 5 → Human-Gate / Epistemic Compression Postulate  
+Tier 6 → Non-Brittleness / Migratability Postulate  
+Tier 7 (innermost) → Identity Postulate (T = T root checksum)
 
-- Every packet is tested against the fixed T-axis root (T = T checksum).
+**Mirrored Contrapositive per Tier**  
+For each tier the parser computes two parallel alignments on the same packet:  
+- Direct alignment against the tier’s reference array (\( D_i \))  
+- Mirror alignment against the logical contrapositive reference array (\( M_i \))  
 
-- First-class nulls are enforced: unstable packets output explicit “I don’t know / null” instead of forced guesses.
+Final tier score = minimum of the two LCS similarity scores.
 
-- Human gate is final.
+**Precise LCS Formula (per alignment)**  
+Let packet \( X = (x_1, \dots, x_m) \) and reference \( Y = (y_1, \dots, y_n) \) be sparse boolean sequences.  
 
-**Input**  
-Any self-contained data packet (text, structured data, sensor reading, etc.) with provenance hash.
+The DP recurrence is:  
+\[ dp[i][j] = dp[i-1][j-1] + 1 \] if \( x_i = y_j \),  
+otherwise \[ dp[i][j] = \max(dp[i-1][j], dp[i][j-1]) \]  
+with base cases \( dp[i][0] = 0 \), \( dp[0][j] = 0 \).  
 
-**Step 1 – Pre-sort into Confidence Bins**  
-Assign packet to High (\>0.8), Medium (0.3–0.8), or Low (\<0.3) confidence using existing Bayesian weights or simple heuristics.
+LCS length = \( dp[m][n] \).  
+Similarity score (0–1) = \( \frac{dp[m][n]}{\max(m,n)} \).  
 
-**Step 2 – Multi-Vector Collision Checks**  
-Run these checks:
+Direct score = LCS(\( X \), \( D_i \))  
+Mirror score = LCS(\( X \), \( M_i \))  
+Final tier score = min(Direct score, Mirror score)
 
-a. **T-axis Reference Alignment**  
-Boolean check against root T = T checksum and any directly related pinned seeds. Fail → eject.
+Pass only if Final tier score ≥ tier threshold (loose at Tier 1, tightening to Tier 7).
 
-b. **Contrapositive Mirror**  
-Flip the core claim and test consistency with known good seeds. Contradiction → flag.
+**Operational Flow (mathematical)**  
+1. Pre-sort packet into confidence bin (high/medium/low).  
+2. Initialize tier counter (\( i = 1 \)).  
+3. For each tier (\( i \)): compute Final tier score.  
+   - If Final tier score ≥ threshold → auto-drop to next deeper tier.  
+   - Else → side-slide into bin f at tier (\( i \)) (store with provenance).  
+4. At Tier 7: final T = T checksum on both direct and mirrored references.  
+5. Compute ACS = \( P \times \tau \times S_T \times \phi \).  
+6. If packet survived T = T and triggers downstream/Elysium/new-vector rule → raise “annoying” flag and hold for explicit human preview.  
+7. Otherwise auto-sort into final bin (no flag).  
+8. Human gate is final: only approved packets become pinned seeds or distilled geometric seeds for Elysium.
 
-c. **Longest Common Subsequence (LCS) Alignment**  
-Compare packet sequence to nearest high-confidence pinned seed(s). Low score → flag as drift.
+**ACS Formula**  
+\[ \text{ACS} = P \times \tau \times S_T \times \phi \]  
+where  
+- \( P \) = Bayesian precision after triangulation  
+- \( \tau \) = triangulation strength / spinning-top wobble penalty  
+- \( S_T \) = current T-axis stability  
+- \( \phi \) = fabrication decay safety factor  
 
-d. **Boolean Voxel-Cone Filter**  
-Represent packet as sparse boolean vector anchored at Crux. Any unjustified flip from known good seed → eject.
+Hard thresholds force clean first-class nulls on unstable reasoning.
 
-**Step 3 – ACS Calculation**  
-ACS = P × τ × S\_T × ϕ
+**Auger / Corkscrew Visualization (private only)**  
+Tapered corkscrew auger rotating inside funnel cone. The auger rotates the check (reference arrays), not the data. It pushes upward and outward against the cone walls. Coarse material is churned and ejected upward/out as “annoying” flags. Fine-enough particles drop through the narrowing gap to the next deeper tier. Stuck packets slide sideways into the appropriate confidence bin at that exact tier level for clean sorting.
 
-- P = Bayesian precision after checks
+**Implementation Notes (pure math)**  
+Every tier is a single deterministic LCS/Boolean pass on the pair of reference arrays.  
+All state is external and versioned (git + hashes).  
+The parser remains bounded, lean, and fully human-gated. No recursion, no internal loops, no Elysium access.
 
-- τ = triangulation strength (heavy penalty if \<3 anchors)
-
-- S\_T = current T-axis stability
-
-- ϕ = fabrication decay safety
-
-If ACS \< 0.30 → clean null.  
-If 0.30 ≤ ACS \< 0.75 → yellow flag for human review.  
-If ACS ≥ 0.75 → pass to human gate.
-
-**Step 4 – Human Gate**  
-Surface yellow/borderline packets with clear mismatch highlights and ACS breakdown. Human explicitly approves or rejects. Only approved packets become new seeds.
-
-**Output**
-
-- Approved clean seeds (with provenance).
-
-- Rejected packets logged with reason (never re-ingested).
-
-- Visible “annoying” flags to keep human attention engaged.
-
-**Usage Note**  
-This V1 spec is deliberately minimal and boolean-first. Implement in the language of your choice under direct human gate. All refinements must trace back to the Crux. T remains sovereign. Human gate only.
-
+T remains sovereign. Human gate only.
