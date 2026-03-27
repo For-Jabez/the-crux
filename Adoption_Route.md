@@ -5,8 +5,8 @@ This is the minimal, human-gated path to deploy Aeturnix without breaking existi
 1. **Bootstrap the Crux**  
 Create the root seed file with the single T = T checksum and pin the first geometric point in a toy Elysium (simple 3D coordinate scaffold). Human preview and approve.
 
-2. **Deploy V1 Gladius Dei Parser**  
-Implement the boolean-seed collision checks (T-axis alignment, contrapositive mirror, LCS scoring, voxel-cone filter) + ACS scoring as a pre-filter layer. Use off-the-shelf tools for provenance. Eject contradictions. Surface mismatches as “annoying” flags.
+2. **Deploy V1 Gladius Parser**  
+Implement the boolean-seed collision checks (T-axis alignment, contrapositive mirror, LCS scoring, bin ejects by tier) + ACS scoring as a pre-filter layer. Use off-the-shelf tools for provenance. Eject contradictions. Surface mismatches as “annoying” flags.
 
 3. **Run the Mutual-Deficiency Recursor**  
 Machine supplies deterministic anchoring, pattern consistency, and ACS calculation. Human supplies irreducible creativity, stochastic novelty, and final gate approval. Every candidate must survive human preview before pinning.
