@@ -62,10 +62,9 @@ For each tier the parser computes two parallel alignments on the same packet:
 - Direct alignment against the tier’s reference array (\( D_i \))  
 - Mirror alignment against the logical contrapositive reference array (\( M_i \))  
 
-Final tier score = minimum of the two LCS similarity scores.
-
 **Precise LCS Formula (per alignment)**  
 Let packet \( X = (x_1, \dots, x_m) \) and reference \( Y = (y_1, \dots, y_n) \) be sparse boolean sequences.  
+
 \[ dp[i][j] = 
 \begin{cases} 
 dp[i-1][j-1] + 1 & \text{if } x_i = y_j \\
@@ -78,7 +77,7 @@ Similarity score (0–1) = \( \frac{dp[m][n]}{\max(m,n)} \).
 
 Direct score = LCS(\( X \), \( D_i \))  
 Mirror score = LCS(\( X \), \( M_i \))  
-Final tier score = min(Direct score, Mirror score)  
+Final tier score = min(Direct score, Mirror score)
 
 Pass only if Final tier score ≥ tier threshold (loose at Tier 1, tightening to Tier 7).
 
