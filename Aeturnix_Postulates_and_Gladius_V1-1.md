@@ -65,23 +65,20 @@ For each tier the parser computes two parallel alignments on the same packet:
 **Precise LCS Formula (per alignment)**  
 Let packet \( X = (x_1, \dots, x_m) \) and reference \( Y = (y_1, \dots, y_n) \) be sparse boolean sequences.  
 
-$$
-dp[i][j] = 
-\begin{cases} 
-dp[i-1][j-1] + 1 & \text{if } x_i = y_j \\
-\max(dp[i-1][j], dp[i][j-1]) & \text{otherwise}
-\end{cases}
-$$  
-with base cases \( dp[i][0] = 0 \), \( dp[0][j] = 0 \).  
+The DP recurrence is:  
+dp[i][j] = dp[i-1][j-1] + 1 if x_i = y_j,  
+otherwise dp[i][j] = max(dp[i-1][j], dp[i][j-1])  
+with base cases dp[i][0] = 0, dp[0][j] = 0.  
 
-LCS length = \( dp[m][n] \).  
-Similarity score (0–1) = \( \frac{dp[m][n]}{\max(m,n)} \).  
+LCS length = dp[m][n].  
+Similarity score (0–1) = dp[m][n] / max(m,n).  
 
-Direct score = LCS(\( X \), \( D_i \))  
-Mirror score = LCS(\( X \), \( M_i \))  
+Direct score = LCS(X, D_i)  
+Mirror score = LCS(X, M_i)  
 Final tier score = min(Direct score, Mirror score)
 
 Pass only if Final tier score ≥ tier threshold (loose at Tier 1, tightening to Tier 7).
+
 **Operational Flow (mathematical)**  
 1. Pre-sort packet into confidence bin (high/medium/low).  
 2. Initialize tier counter (\( i = 1 \)).  
