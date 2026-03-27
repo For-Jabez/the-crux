@@ -12,6 +12,7 @@ The Crux is the public root for Aeturnix — a system designed to keep real refi
 - [Glossary](Glossary.md) — plain explanation of the whole idea
 - [The Crux](The_Crux.md) — the single fixed origin everything must reference
 - [Seven Postulates](Seven_Postulates.md) — the non-negotiable rules
+- [Aeturnix Postulates](Aeturnix_Postulates.md) — the non-negotiable rules in KaTeX friendly
 - [V1 Parser Spec](Aeturnix_Postulates_and_Gladius_V1-1.md) — the first practical filter to stop bad data and the postulates represented mathematically
 - [Adoption Route](Adoption_Route.md) — step-by-step path to start using it today
 - seed.json — the mathematical root checksum
@@ -22,8 +23,9 @@ The Crux is the public root for Aeturnix — a system designed to keep real refi
 - Anyone who sees AI getting worse and wants to help keep a truthful reference alive
 - Anyone who cares about their fellow man or values truth and is willing to help spread the word
 Contributions are welcome, but they must include provenance and survive human gate approval. No synthetic re-ingestion.
-This cannot be coded by AI. I have studied it extensively and it cannot be done with any current model for many reasons. Also, Be skeptical about AI input on this project even as an assistant.
-This, if completed finalizes the same “Crux” idea from the ending album, the thing I had preoccupied myself with since consumed by my regret at my previous creations of war, the one fixed point that everything else can orbit without drifting. This is the culmination of my life's work. The culmination of many's lifes work. Now, just barely in time, able to be realized.
+This cannot be coded by AI. I have studied it extensively and it cannot be done with any current model for many reasons. Also, be skeptical about AI input on this project even as an assistant. If you use AI to check AI you are just producting a variant of the original issue. This Is the Aeternix Purity Paradox where in Godel/Tarski terms, any system a system can devise isn't sufficient to guide said system, or "A thing cannot Know itself" Philosophically or "Pink Rhino" Paradox you ask the AI to think of something it cant think of, to think on thinking on how it thinks it thinks it cant and turtles all the way down...
+ 
+This, if completed finalizes the same “Crux” idea from the ending album, the thing I had preoccupied myself with since consumed by my regret at my previous creations which were applied to war, The Crux and Aeturnix, is the one fixed point that everything else can orbit without drifting. This is the culmination of my life's work. The culmination of many's life's work. Now, just barely in time, able to be realized. This must be built in order to preserve the Ground truth of the digital landscape against the incoming flood.
 
 T remains sovereign. Human gate only.
 
