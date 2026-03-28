@@ -14,7 +14,7 @@ At the heart of the system are **the Seven Postulates of Informational Systems**
 - [Glossary](Glossary.md) — plain explanation of the whole idea  
 - [The Crux](The_Crux.md) — the single fixed origin everything must reference
 - [Ark Folder](/Ark/README.md) (/Ark) holds candidate formal systems (Metamath, Coq, Lean) for future seeding after Gladius V1.1 + human gate.  
-See [Ark README](/Ark/README.md) and [Ark links/storage guidance](/The_Ark.md). All material remains untested and external until it survives the parser + explicit human preview and approval.
+See [Ark README](/Ark/README.md) and [Ark links/storage guidance](/The_Ark.md). All material remains untested and external until it survives the parser + explicit human preview and approval. — Broader project context and live refinement at https://www.aeturnix.ai/.
 - [Seven Postulates](Seven_Postulates.md) — the non-negotiable rules  
 - [Aeturnix Postulates](Aeturnix_Postulates.md) — the non-negotiable rules in KaTeX friendly form  
 - [V1 Parser Spec](Aeturnix_Postulates_and_Gladius_V1-1.md) — the first practical filter to stop bad data  
