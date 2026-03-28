@@ -27,3 +27,8 @@ Contributions are welcome, but they must include provenance and survive human ga
 T remains sovereign. Human gate only.
 
 If you want to help stop the collapse, take a look.
+
+**Project maintained by** J. Loren Wince for Aeturnix.ai / Aeturnix Data Systems.  
+Licensed under CC BY-NC-ND 4.0 — you are free to share and adapt for non-commercial use with proper attribution, but no derivatives may be shared if modified.
+
+All contributions remain under the same license and must still survive human gate.
